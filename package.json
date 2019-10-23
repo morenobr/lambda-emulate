@@ -1,0 +1,50 @@
+{
+  "name": "lambda-emulate",
+  "version": "1.0.0",
+  "description": "Emulate lambda calls using a local web server",
+  "main": "index.js",
+  "scripts": {
+    "prepublishOnly": "npm run ci && npm run dist",
+    "build": "webpack --mode=production",
+    "ci": "jest",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morenobr/lambda-emulate.git"
+  },
+  "keywords": [
+    "lambda",
+    "emulate",
+    "expressjs"
+  ],
+  "author": "Petherson Moreno",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/morenobr/lambda-emulate/issues"
+  },
+  "homepage": "https://github.com/morenobr/lambda-emulate#readme",
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run ci"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@types/jest": "^24.0.19",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.20.0",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "jest-silent-reporter": "^0.1.2",
+    "terser-webpack-plugin": "^2.2.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  }
+}
